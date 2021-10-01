@@ -1,0 +1,17 @@
+import datetime
+import winsound
+frekans=7000
+süre=5000
+datetime_var=datetime.datetime.now()
+saat=int(input("saat : "))
+dakika=int(input("dakika : "))
+loop=True
+while loop:
+    print(datetime_var.now().time().minute)
+    if datetime_var.now().time().minute==dakika and datetime_var.now().time().hour==saat:
+        print(datetime_var.now().time().minute)
+        winsound.Beep(frekans,süre)
+        loop=False
+print("ALARM ÇALDI")
+alarm=datetime.time(saat,dakika)
+print("Girilen alarm değeri : ",alarm)
